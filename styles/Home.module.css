@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap');
+
 .container {
   min-height: 100vh;
   padding: 0 0.5rem;
@@ -5,6 +7,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: linear-gradient(180deg, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
 }
 
 .main {
@@ -16,107 +19,393 @@
   align-items: center;
 }
 
-.footer {
+.accordion:hover {
+  background-color: hsl(0, 0%, 97%);
+}
+
+.accordionOpen {
+  font-weight: 700;
+  border: none;
+  outline: none;
+  background-color: white;
   width: 100%;
-  height: 100px;
-  border-top: 1px solid #eaeaea;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer img {
-  margin-left: 0.5rem;
-}
-
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-}
-
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-}
-
-.title,
-.description {
-  text-align: center;
-}
-
-.description {
-  line-height: 1.5;
-  font-size: 1.5rem;
-}
-
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-}
-
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-  margin-top: 3rem;
-}
-
-.card {
-  margin: 1rem;
-  flex-basis: 45%;
-  padding: 1.5rem;
+  padding: 20px 0 20px 10px;
+  font-family: 'Kumbh Sans',
+    sans-serif;
+  font-size: 14px;
   text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+.panel {
+  font-size: 12px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  opacity: 0.8;
 }
 
-.card h3 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
+.arrow {
+  background-image: url('../images/icon-arrow-down.svg');
+  background-repeat: no-repeat;
+  height: 10px;
+  width: 10px;
+  margin-right: 15px;
 }
 
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
+.arrowDown {
+  background-image: url('../images/icon-arrow-down.svg');
+  background-repeat: no-repeat;
+  height: 10px;
+  width: 10px;
+  margin-right: 15px;
+  transform: rotate(180deg);
 }
 
-.logo {
-  height: 1em;
+.divider {
+  border-top: 1px solid hsl(240, 5%, 91%);
 }
 
-@media (max-width: 600px) {
-  .grid {
+@media screen and (min-width: 901px) {
+  .mainCard {
+    background-color: white;
+    border-radius: 25px;
+
+    width: 900px;
+    height: 500px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+  }
+
+  .cardContent {
+    display: flex;
+    justify-content: space-between;
+    overflow: visible;
+    position: relative;
+  }
+
+  .leftSide {
+    text-align: center;
+    height: 500px;
+    width: 450px;
+    font-family: 'Kumbh Sans', sans-serif;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .womanOnline {
+    height: 100%;
+    width: 120%;
+    background-image: url('../images/illustration-woman-online-desktop.svg');
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: -60px;
+    right: -10px;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  .box {
+    background-image: url('../images/illustration-box-desktop.svg');
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: 200px;
+    left: -100px;
+    z-index: 1;
+    overflow: visible;
+  }
+
+  .shadowBg {
+    background-image: url('../images/bg-pattern-desktop.svg');
+    background-repeat: no-repeat;
+    height: 1000px;
+    width: 1000px;
+    position: absolute;
+    top: -300px;
+    right: 25px;
+  }
+
+  .rightSide {
+    font-family: 'Kumbh Sans', sans-serif;
+    padding: 45px 0px 45px 20px;
+    text-align: left;
+    height: 500px;
+    width: 450px;
+    overflow: auto;
+  }
+
+  .rightSide::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .rightSide::-webkit-scrollbar-track {
+    background: hsl(240, 5%, 91%);
+    border-radius: 100px;
+  }
+
+  .rightSide::-webkit-scrollbar-thumb {
+    background: hsl(0, 0%, 72%);
+    border-radius: 100px;
+  }
+
+  .rightSide::-webkit-scrollbar-thumb:hover {
+    background: hsl(0, 0%, 61%);
+  }
+
+  .title {
+    padding-left: 10px;
+  }
+
+  .accordionPanel {
+    width: 80%;
+    overflow: hidden;
+  }
+
+  .accordion {
+    border: none;
+    outline: none;
+    background-color: white;
     width: 100%;
+    padding: 20px 0 20px 10px;
+    font-family: 'Kumbh Sans',
+    sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: hsl(238, 29%, 16%);
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 374px) {
+  .mainCard {
+    background-color: white;
+    border-radius: 25px;
+
+    width: 300px;
+    height: 550px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     flex-direction: column;
+
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+      0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+      0 12.5px 10px rgba(0, 0, 0, 0.06),
+      0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+      0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+      0 100px 80px rgba(0, 0, 0, 0.12);
+  }
+
+  .cardContent {
+    overflow: visible;
+    position: relative;
+  }
+
+  .leftSide {
+    text-align: center;
+    height: 125px;
+    width: 300px;
+    font-family: 'Kumbh Sans', sans-serif;
+    overflow: visible;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .womanOnline {
+    height: 200px;
+    width: 300px;
+    background-image: url('../images/illustration-woman-online-mobile.svg');
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 33px;
+    right: 0px;
+    z-index: 1;
+  }
+
+  .box {
+    display: none;
+  }
+
+  .shadowBg {
+    background-image: url('../images/bg-pattern-mobile.svg');
+    background-repeat: no-repeat;
+    height: 120px;
+    width: 280px;
+    position: absolute;
+    top: 0px;
+    left: 30px;
+  }
+
+  .rightSide {
+    font-family: 'Kumbh Sans', sans-serif;
+    padding: 0px 18px 45px 18px;
+    text-align: left;
+    height: 500px;
+    width: 300px;
+    overflow: scroll;
+  }
+
+  .accordionPanel {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .accordion {
+    border: none;
+    outline: none;
+    background-color: white;
+    width: 100%;
+    padding: 20px 0 20px 10px;
+    font-family: 'Kumbh Sans',
+      sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: hsl(238, 29%, 16%);
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .title {
+    text-align: center;
+  }
+
+  .arrow {
+    background-image: url('../images/icon-arrow-down.svg');
+    background-repeat: no-repeat;
+    height: 10px;
+    width: 10px;
+    margin-right: 10px;
+  }
+
+  .arrowDown {
+    background-image: url('../images/icon-arrow-down.svg');
+    background-repeat: no-repeat;
+    height: 10px;
+    width: 10px;
+    margin-right: 10px;
+    transform: rotate(180deg);
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 900px) {
+  .mainCard {
+    background-color: white;
+    border-radius: 25px;
+
+    width: 350px;
+    height: 550px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+      0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+      0 12.5px 10px rgba(0, 0, 0, 0.06),
+      0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+      0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+      0 100px 80px rgba(0, 0, 0, 0.12);
+  }
+
+  .cardContent {
+    overflow: visible;
+    position: relative;
+  }
+
+  .leftSide {
+    text-align: center;
+    height: 125px;
+    width: 375px;
+    font-family: 'Kumbh Sans', sans-serif;
+    overflow: visible;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .womanOnline {
+    height: 200px;
+    width: 300px;
+    background-image: url('../images/illustration-woman-online-mobile.svg');
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 33px;
+    right: 35px;
+    z-index: 1;
+  }
+
+  .box {
+    display: none;
+  }
+
+  .shadowBg {
+    background-image: url('../images/bg-pattern-mobile.svg');
+    background-repeat: no-repeat;
+    height: 120px;
+    width: 300px;
+    position: absolute;
+    top: 0px;
+    left: 66px;
+  }
+
+  .rightSide {
+    font-family: 'Kumbh Sans', sans-serif;
+    padding: 0px 30px 45px 30px;
+    text-align: left;
+    height: 500px;
+    width: 375px;
+    overflow: scroll;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .accordionPanel {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .accordion {
+    border: none;
+    outline: none;
+    background-color: white;
+    width: 100%;
+    padding: 20px 0 20px 10px;
+    font-family: 'Kumbh Sans',
+      sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: hsl(238, 29%, 16%);
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .title {
+    text-align: center;
   }
 }
